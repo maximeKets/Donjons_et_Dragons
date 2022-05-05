@@ -11,10 +11,12 @@ public class Game {
   private Thimble t;
   private Hero player;
   private Board board;
+  private Scanner clavier;
 
   public Game() {
     t = new Thimble();
     board = new Board();
+    clavier= new Scanner(System.in);
   }
 
   /**
@@ -22,7 +24,6 @@ public class Game {
    */
   public void start() {
     String classe;
-    Scanner clavier = new Scanner(System.in);
     System.out.print("quel type de personnage vous voulez créer ? 'Wizzard' ou 'Warrior' ");
     classe = clavier.nextLine();
     player = createHero(classe);
@@ -86,13 +87,23 @@ public class Game {
 
   public void startGame(){
     System.out.println("la Partie Commence !");
-    System.out.println(player.getName() + " est a la case " + board.getBox(0));
+    System.out.println(player.getName() + " est a la case 0 !" );
   }
 
   public void play() {
-    while(true) { // tant que le jeu n'est pas terminé
-      // jouer
+     int boardplace = 0;
+    while (boardplace <64){
+      t.throwDice();
+      System.out.println(player.getName() + " Lance le dé et avance de : " + t.getValue()+ " cases !");
+      boardplace += t.getValue() ;
+      System.out.println(player.getName() + "est à la case " + boardplace + " et tombe sur : " + board.getBox(boardplace));
     }
+    System.out.println("Bravo !!! Vous avez terminé la partie.");
+  }
+  public void replay(){
+    System.out.println("Voulez vous relancer une partie ?");
+    clavier.nextLine();
+    if ()
   }
 
   public static void main(String[] args) {

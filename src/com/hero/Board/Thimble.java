@@ -14,14 +14,6 @@ public class Thimble {
     return this.value;
   }
 
-  public static void main(String[] args) {
-    Thimble t = new Thimble();
-    for (int i=0; i<1000; i++) {
-      t.throwDice();
-      if (t.getValue() < 1 || t.getValue() > 6) {
-        System.out.println("ERROR "+ t.getValue());
-      }
-    }
-  }
+
 
 }
