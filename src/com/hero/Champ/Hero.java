@@ -18,6 +18,8 @@ public class Hero {
     this.damage = damage;
     this.maxDamage = maxDamage;
   }
+  public Hero (){}
+
 
   /*--------------------------------------------------------------------------Getter & Setter------------------------------------------------------------------------*/
 
@@ -62,6 +64,6 @@ public class Hero {
    * Affiche le nom du Hero avec ses points de vie et sa force
    */
   public String toString() {
-    return "Votre Héro est un "+ getClass()  + ", Nommé = " +this.name + " = " + "point de vie : " + this.life + " | " + "point de domage : "+ this.damage;
+    return "Votre Héro est un "+ getClass().getSimpleName()  + ", Nommé = " +this.name + " = " + "point de vie : " + this.life + " | " + "point de domage : "+ this.damage;
   }
 }
