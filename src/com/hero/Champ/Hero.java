@@ -2,7 +2,7 @@ package com.hero.Champ;
 
 import com.hero.Stuff.Stuff;
 
-public class Hero {
+public abstract class Hero {
   private String name;
   private int life;
   private int maxLife;
@@ -18,7 +18,7 @@ public class Hero {
     this.damage = damage;
     this.maxDamage = maxDamage;
   }
-  public Hero (){}
+  public  Hero (){}
 
 
   /*--------------------------------------------------------------------------Getter & Setter------------------------------------------------------------------------*/

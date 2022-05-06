@@ -1,26 +1,9 @@
 package com.hero.Board;
 
-public class Board {
-  private Box[] tab = new Box[64];
+import com.hero.Exception.PersonnageHorsPlateauException;
 
-  public Board() {
-    for (int i = 0 ; i<tab.length ; i++) {
-      tab[i] = new Box();
-      int random = (int) ((Math.random() * 3) + 1);
-      switch (random) {
-        case 1:
-          tab[i].setContent("gobelin"); break;
-        case 2:
-          tab[i].setContent("treasure"); break;
-        case 3:
-          tab[i].setContent("empty"); break;
-        default:
-          // never
-      }
-    }
-  }
+public interface Board {
+  public Box getBox(int index) throws PersonnageHorsPlateauException;
 
-  public Box getBox(int index) {
-    return tab[index];
-  }
+  int size();
 }
