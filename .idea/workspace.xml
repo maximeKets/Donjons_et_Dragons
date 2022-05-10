@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76998ecd-5253-4b42-b7af-13cb1c951aa9" name="Changes" comment="Try catch + exception">
+    <list default="true" id="76998ecd-5253-4b42-b7af-13cb1c951aa9" name="Changes" comment="Jeu fonctionnel ! A refactoriser">
       <change afterPath="$PROJECT_DIR$/src/com/hero/Event/EnemyEvent.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/hero/Event/Event.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/hero/Event/LifeEvent.java" afterDir="false" />
@@ -156,7 +156,7 @@
       <option name="presentableId" value="Default" />
       <updated>1651647547622</updated>
       <workItem from="1652079218220" duration="10906000" />
-      <workItem from="1652167342279" duration="18661000" />
+      <workItem from="1652167342279" duration="19349000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1651674250187</created>
@@ -186,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651847451572</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Jeu fonctionnel ! A refactoriser">
+      <created>1652192668284</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652192668284</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +215,8 @@
     <MESSAGE value="REfactories" />
     <MESSAGE value="Party work" />
     <MESSAGE value="Try catch + exception" />
-    <option name="LAST_COMMIT_MESSAGE" value="Try catch + exception" />
+    <MESSAGE value="Jeu fonctionnel ! A refactoriser" />
+    <option name="LAST_COMMIT_MESSAGE" value="Jeu fonctionnel ! A refactoriser" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
