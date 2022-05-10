@@ -1,7 +1,7 @@
 package com.hero.Stuff;
 
 public class Storm extends Stuff{
-  public Storm(String name, int damage) {
+  public Storm() {
     super("Storm", 2);
   }
 }

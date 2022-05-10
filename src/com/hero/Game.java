@@ -1,9 +1,9 @@
 package com.hero;
 
 import com.hero.Board.*;
-import com.hero.Champ.Hero;
-import com.hero.Champ.Warrior;
-import com.hero.Champ.Wizzard;
+import com.hero.Hero.Hero;
+import com.hero.Hero.Champion.Warrior;
+import com.hero.Hero.Champion.Wizzard;
 import com.hero.Exception.PersonnageHorsPlateauException;
 import com.hero.Exception.WrongAnswer;
 
@@ -98,11 +98,17 @@ public class Game {
     actionMenu(choice);
   }
 
+  /**
+   * place le joueur a la case 0 et lance la partie
+   */
   public void startGame() {
     System.out.println("la Partie Commence !");
     System.out.println(player.getName() + " est a la case 0 !");
   }
 
+  /**
+   * joue une partie
+   */
   public void play() {
     int boardplace = 0;
     boolean fini = false;
@@ -112,15 +118,28 @@ public class Game {
       boardplace += t.getValue();
       try {
         Box box = board.getBox(boardplace);
-        System.out.println(player.getName() + "est à la case " + boardplace + " et tombe sur : " + box);
+        System.out.println(player.getName() + " est à la case " + boardplace + " et tombe sur : " + box);
+        box.interagir(player);
       } catch (PersonnageHorsPlateauException e) {
         fini = true;
         System.out.println(e);
       }
+      System.out.println("Voulez vous continuer ? 'oui' ou 'non'");
+
+      if (clavier.nextLine().equalsIgnoreCase("o")){
+        continue;
+      }
+      if (clavier.nextLine().equalsIgnoreCase("n")){
+        replay();
+      }
+
     }
 
   }
 
+  /**
+   * fonction pour relancer une partie
+   */
   public void replay() {
     System.out.println("Voulez vous Commencer une partie ? 'O' pour oui, 'N' pour non. ");
     if (clavier.nextLine().equalsIgnoreCase("O")) {
@@ -133,6 +152,11 @@ public class Game {
     }
   }
 
+  /**
+   * permet de choisir la difficulté du plateau
+   * @param input
+   * @return newBoard
+   */
   public Board createBoard(String input) {
     Board newBoard = null;
     if (input.equals("easy")) {

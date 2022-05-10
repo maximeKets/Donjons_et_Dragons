@@ -1,7 +1,7 @@
 package com.hero.Stuff;
 
 public class Fireball extends Stuff{
-  public Fireball(String name, int damage) {
+  public Fireball() {
     super("fireBall", 7);
   }
 }

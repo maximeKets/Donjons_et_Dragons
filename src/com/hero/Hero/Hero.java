@@ -1,4 +1,4 @@
-package com.hero.Champ;
+package com.hero.Hero;
 
 import com.hero.Stuff.Stuff;
 
@@ -11,7 +11,7 @@ public abstract class Hero {
   private Stuff leftHand ;
   private String rightHand;
 
-  public Hero(String name, int life,  int maxLife, int damage, int maxDamage) {
+  public Hero(String name, int life, int maxLife, int damage, int maxDamage) {
     this.name = name;
     this.life = life;
     this.maxLife = maxLife;
@@ -19,6 +19,12 @@ public abstract class Hero {
     this.maxDamage = maxDamage;
   }
   public  Hero (){}
+
+  public Hero (String name, int life, int damage){
+    this.name = name;
+    this.life = life;
+    this.damage = damage;
+  }
 
 
   /*--------------------------------------------------------------------------Getter & Setter------------------------------------------------------------------------*/
@@ -44,6 +50,19 @@ public abstract class Hero {
   public void setLife(int life) {
     this.life = life;
   }
+  public int getMaxDamage() {
+    return maxDamage;
+  }
+  public void setMaxDamage(int maxDamage) {
+    this.maxDamage = maxDamage;
+  }
+  public int getMaxLife() {
+    return maxLife;
+  }
+  public void setMaxLife(int maxLife) {
+    this.maxLife = maxLife;
+  }
+
   // lEFT HAND
   public Stuff getLeftHand() {
     return leftHand;
@@ -62,6 +81,7 @@ public abstract class Hero {
   /*-------------------------------------------------------------------------function-------------------------------------------------------------------------- */
   /**
    * Affiche le nom du Hero avec ses points de vie et sa force
+   * return information champion
    */
   public String toString() {
     return "Votre Héro est un "+ getClass().getSimpleName()  + ", Nommé = " +this.name + " = " + "point de vie : " + this.life + " | " + "point de domage : "+ this.damage;

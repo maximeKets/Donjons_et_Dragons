@@ -4,17 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76998ecd-5253-4b42-b7af-13cb1c951aa9" name="Changes" comment="Party work">
-      <change afterPath="$PROJECT_DIR$/src/com/hero/Board/EasyBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/hero/Board/HardBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/hero/Board/MediumBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/hero/Exception/PersonnageHorsPlateauException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/hero/Exception/WrongAnswer.java" afterDir="false" />
+    <list default="true" id="76998ecd-5253-4b42-b7af-13cb1c951aa9" name="Changes" comment="Try catch + exception">
+      <change afterPath="$PROJECT_DIR$/src/com/hero/Event/EnemyEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hero/Event/Event.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hero/Event/LifeEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hero/Event/StuffEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Dragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Gobelin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Sorcier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hero/Potion/BigPotion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hero/Potion/Potion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hero/Potion/SmallPotion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hero/UML.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Champ/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Champ/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Champ/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Champ/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/Box.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/EasyBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/EasyBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/HardBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/HardBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/MediumBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/MediumBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/Thimble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/Thimble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Champ/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Hero/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Champ/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Hero/Champion/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Champ/Wizzard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Hero/Champion/Wizzard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hero/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Stuff/Blade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Stuff/Blade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Stuff/Fireball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Stuff/Fireball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Stuff/Hammer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Stuff/Hammer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Stuff/Storm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Stuff/Storm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Stuff/Stuff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Stuff/Stuff.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +44,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -51,12 +69,23 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/kets/Bureau/Donjons_et_Dragons&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com/hero" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.com.hero.Game">
     <configuration name="Board" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.hero.Board.Board" />
@@ -84,8 +113,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Warrior" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.hero.Champ.Warrior" />
+    <configuration name="com.hero.Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hero.Game" />
       <module name="Donjons_et_Dragons" />
       <extension name="coverage">
         <pattern>
@@ -97,8 +126,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.hero.Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.hero.Game" />
+    <configuration name="com.hero.Hero.Champion.Warrior" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hero.Hero.Champion.Warrior" />
       <module name="Donjons_et_Dragons" />
       <extension name="coverage">
         <pattern>
@@ -126,6 +155,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651647547622</updated>
+      <workItem from="1652079218220" duration="10906000" />
+      <workItem from="1652167342279" duration="18661000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1651674250187</created>
@@ -148,8 +179,18 @@
       <option name="project" value="LOCAL" />
       <updated>1651761226977</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Try catch + exception">
+      <created>1651847451572</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651847451572</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -166,7 +207,8 @@
     <MESSAGE value="Start" />
     <MESSAGE value="REfactories" />
     <MESSAGE value="Party work" />
-    <option name="LAST_COMMIT_MESSAGE" value="Party work" />
+    <MESSAGE value="Try catch + exception" />
+    <option name="LAST_COMMIT_MESSAGE" value="Try catch + exception" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

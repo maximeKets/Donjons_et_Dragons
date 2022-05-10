@@ -8,16 +8,6 @@ public class EasyBoard implements Board {
   public EasyBoard() {
     for (int i = 0 ; i<tab.length ; i++) {
       tab[i] = new Box();
-      int random = (int) ((Math.random() * 3) + 1);
-      switch (random) {
-        case 1:
-          tab[i].setContent("gobelin"); break;
-        case 2:
-          tab[i].setContent("treasure"); break;
-        case 3:
-          tab[i].setContent("empty"); break;
-        default:
-      }
     }
   }
 
@@ -31,6 +21,10 @@ public class EasyBoard implements Board {
     }
   }
 
+  /**
+   * affiche la taille du plateau
+   * @return tab.length
+   */
   public int size(){
     return tab.length ;
   }
