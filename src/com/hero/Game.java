@@ -1,22 +1,25 @@
 package com.hero;
 
 import com.hero.Board.*;
+import com.hero.Exception.WrongAnswer;
 import com.hero.Hero.Hero;
 import com.hero.Hero.Champion.Warrior;
 import com.hero.Hero.Champion.Wizzard;
 import com.hero.Exception.PersonnageHorsPlateauException;
-import com.hero.Exception.WrongAnswer;
 
 import java.util.Scanner;
+
 
 public class Game {
   private Thimble t;
   private Hero player;
   private Board board;
   private Scanner clavier;
+  private Menu menu;
 
   public Game() {
     t = new Thimble();
+    menu = new Menu();
     clavier = new Scanner(System.in);
   }
 
@@ -24,22 +27,13 @@ public class Game {
    * Start the party
    */
   public void start() {
-    String input;
-    System.out.print("choisisez le niveau de dificulté : 'easy', 'medium', 'hard'");
-    input = clavier.nextLine();
-    board = createBoard(input);
-    System.out.print("quel type de personnage vous voulez créer ? 'Wizzard' ou 'Warrior' ");
-    input = clavier.nextLine();
+    board = createBoard(menu.choiceLever());
     try {
-      player = createHero(input);
+      player = createHero(menu.choiceClass());
+    } catch (WrongAnswer e) {
+      System.out.println(e);
     }
-    catch (WrongAnswer e){
-      System.out.println(e);;
-    }
-
-    System.out.print("Quel nom donnez vous à votre personnage ? ");
-    player.setName(clavier.nextLine());
-    menuRepeat();
+    player.setName(menu.choiceName());
   }
 
   /**
@@ -51,52 +45,14 @@ public class Game {
   public Hero createHero(String classe) throws WrongAnswer {
     if (classe.equals("Wizzard")) {
       player = new Wizzard();
-    }
-    if (classe.equals("Warrior")) {
+    } else if (classe.equals("Warrior")) {
       player = new Warrior();
-    }
-    else {
+    } else {
       throw new WrongAnswer();
     }
     return player;
   }
 
-  /**
-   * Menu d'option
-   *
-   * @param choice
-   * @return void
-   */
-  public void actionMenu(String choice) {
-    if (choice.equals("I")) {
-      System.out.println(player);
-      menuRepeat();
-    }
-    if (choice.equals("C")) {
-      System.out.print("Quel nom donnez vous à votre personnage ? ");
-      player.setName(clavier.nextLine());
-      System.out.println();
-      menuRepeat();
-    }
-    if (choice.equals("Q")) {
-      System.out.println("Nous espérons vous revoir très vite !!! ");
-      System.exit(0);
-    }
-    if (choice.equals("S")) {
-      startGame();
-    }
-  }
-
-  /**
-   * Permet d'afficher le menu tant que la partie n'est pas lancé ni quitté
-   */
-  public void menuRepeat() {
-    Scanner clavier = new Scanner(System.in);
-    System.out.println("");
-    System.out.println("Tapez 'I' pour afficher les informations du joueur, 'C' pour modifier le nom,  'Q' pour quitter et 'S' pour commencer la partie");
-    String choice = clavier.nextLine();
-    actionMenu(choice);
-  }
 
   /**
    * place le joueur a la case 0 et lance la partie
@@ -124,36 +80,12 @@ public class Game {
         fini = true;
         System.out.println(e);
       }
-      System.out.println("Voulez vous continuer ? 'oui' ou 'non'");
-
-      if (clavier.nextLine().equalsIgnoreCase("o")){
-        continue;
-      }
-      if (clavier.nextLine().equalsIgnoreCase("n")){
-        replay();
-      }
-
-    }
-
-  }
-
-  /**
-   * fonction pour relancer une partie
-   */
-  public void replay() {
-    System.out.println("Voulez vous Commencer une partie ? 'O' pour oui, 'N' pour non. ");
-    if (clavier.nextLine().equalsIgnoreCase("O")) {
-      start();
-      play();
-      replay();
-
-    } else if (clavier.nextLine().equals("N")) {
-      System.exit(0);
+      menu.continueGame();
     }
   }
-
   /**
    * permet de choisir la difficulté du plateau
+   *
    * @param input
    * @return newBoard
    */
@@ -171,10 +103,41 @@ public class Game {
     return newBoard;
   }
 
+  /**
+   * fonction pour relancer une partie
+   */
+  public void playGame() {
+    if (menu.startParty().equals("O")) {
+      start();
+      int end = 0;
+      while ( end < 1)
+        switch (menu.actionMenu()) {
+          case 1:
+            System.out.println(player);
+            break;
+
+          case 2:
+            System.out.print("Quel nom donnez vous à votre personnage ? ");
+            player.setName(clavier.nextLine());
+            break;
+
+          case 3:
+            end = 1;
+            startGame();
+            break;
+        }
+
+      play();
+      playGame();
+
+    } else if (menu.startParty().equals("N")) {
+      System.exit(0);
+    }
+  }
+
   public static void main(String[] args) {
     Game party = new Game();
-    party.replay();
-
+    party.playGame();
   }
 
 }

@@ -5,33 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76998ecd-5253-4b42-b7af-13cb1c951aa9" name="Changes" comment="Jeu fonctionnel ! A refactoriser">
-      <change afterPath="$PROJECT_DIR$/src/com/hero/Event/EnemyEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/hero/Event/Event.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/hero/Event/LifeEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/hero/Event/StuffEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Dragon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Gobelin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Sorcier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/hero/Potion/BigPotion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/hero/Potion/Potion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/hero/Potion/SmallPotion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/hero/UML.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hero/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/Box.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/EasyBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/EasyBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/HardBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/HardBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/MediumBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/MediumBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/Thimble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/Thimble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Champ/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Hero/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Champ/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Hero/Champion/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Champ/Wizzard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Hero/Champion/Wizzard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Event/EnemyEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Event/EnemyEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Event/LifeEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Event/LifeEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hero/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Stuff/Blade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Stuff/Blade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Stuff/Fireball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Stuff/Fireball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Stuff/Hammer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Stuff/Hammer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Stuff/Storm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Stuff/Storm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Stuff/Stuff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Stuff/Stuff.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +134,8 @@
       <option name="presentableId" value="Default" />
       <updated>1651647547622</updated>
       <workItem from="1652079218220" duration="10906000" />
-      <workItem from="1652167342279" duration="19349000" />
+      <workItem from="1652167342279" duration="19881000" />
+      <workItem from="1652251096001" duration="22290000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1651674250187</created>
@@ -193,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652192668284</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Jeu fonctionnel ! A refactoriser">
+      <created>1652192722692</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1652192722692</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +205,19 @@
     <option name="LAST_COMMIT_MESSAGE" value="Jeu fonctionnel ! A refactoriser" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/hero/Event/LifeEvent.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="Wizzard" language="JAVA" />

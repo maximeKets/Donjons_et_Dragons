@@ -33,6 +33,6 @@ public class LifeEvent implements Event{
       else {
       hero.setLife(addLife);
     }
-    System.out.println("Vos points vie sont égal à :" + hero.getLife()+ " .");
+    System.out.println("Vos points vie sont égal à " + hero.getLife() + " .");
   }
 }

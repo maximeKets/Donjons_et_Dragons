@@ -2,6 +2,7 @@ package com.hero.Event;
 
 import com.hero.Game;
 import com.hero.Hero.Hero;
+import com.hero.Menu;
 import com.hero.Hero.Monster.Dragon;
 import com.hero.Hero.Monster.Gobelin;
 import com.hero.Hero.Monster.Sorcier;
@@ -10,6 +11,7 @@ import com.hero.Hero.Monster.Sorcier;
 public class EnemyEvent implements Event {
   Hero enemy = null;
   Game party = new Game();
+  Menu menu = new Menu();
 
   @Override
   public String toString() {
@@ -44,7 +46,7 @@ public class EnemyEvent implements Event {
     System.out.println("le combat commence !");
     while (vieMonstre >= 0 || vieHero <= 0) {
       System.out.println("vous attaquez " + name + " et lui enlevez " + degatHero + " point de vie");
-      vieMonstre -= degatHero ;
+      vieMonstre -= degatHero;
       if (vieMonstre <= 0) {
         enemy.setLife(vieMonstre);
         System.out.println("Bravo ! Vous avez tué l'énemie ! ");
@@ -58,7 +60,7 @@ public class EnemyEvent implements Event {
       }
       if (vieHero <= 0){
         System.out.println("vous êtes décédé !");
-        party.replay();
+        party.playGame();
       }
     }
   }
