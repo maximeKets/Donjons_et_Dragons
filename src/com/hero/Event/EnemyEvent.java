@@ -2,6 +2,7 @@ package com.hero.Event;
 
 import com.hero.Game;
 import com.hero.Hero.Hero;
+import com.hero.Hero.Monster.Boss;
 import com.hero.Menu;
 import com.hero.Hero.Monster.Dragon;
 import com.hero.Hero.Monster.Gobelin;
@@ -20,6 +21,7 @@ public class EnemyEvent implements Event {
 
   public EnemyEvent() {
     int random = (int) (Math.random() * 3) + 1;
+
     if (random == 1) {
       enemy = new Dragon();
     }
@@ -29,6 +31,9 @@ public class EnemyEvent implements Event {
     if (random == 3) {
       enemy = new Sorcier();
     }
+  }
+  public EnemyEvent(String Boss){
+    enemy = new Boss();
   }
 
   @Override

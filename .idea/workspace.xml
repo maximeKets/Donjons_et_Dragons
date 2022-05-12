@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76998ecd-5253-4b42-b7af-13cb1c951aa9" name="Changes" comment="fix : refactor game + menu. &#10;bug at interagir with monster + potion">
-      <change afterPath="$PROJECT_DIR$/src/com/hero/Main.java" afterDir="false" />
+    <list default="true" id="76998ecd-5253-4b42-b7af-13cb1c951aa9" name="Changes" comment="fix bug.">
+      <change afterPath="$PROJECT_DIR$/src/com/hero/Event/EmptyEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Boss.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/Box.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hero/Board/EasyBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/EasyBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/Thimble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/Dice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/HardBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/HardBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/MediumBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/MediumBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hero/Event/EnemyEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Event/EnemyEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Event/StuffEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Event/StuffEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hero/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Hero/Champion/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Hero/Champion/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +154,8 @@
       <workItem from="1652079218220" duration="10906000" />
       <workItem from="1652167342279" duration="19881000" />
       <workItem from="1652251096001" duration="22456000" />
-      <workItem from="1652337604437" duration="7984000" />
+      <workItem from="1652337604437" duration="9007000" />
+      <workItem from="1652353966095" duration="8340000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1651674250187</created>
@@ -205,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652279539617</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix bug.">
+      <created>1652346826442</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652346826443</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +237,8 @@
     <MESSAGE value="Try catch + exception" />
     <MESSAGE value="Jeu fonctionnel ! A refactoriser" />
     <MESSAGE value="fix : refactor game + menu. &#10;bug at interagir with monster + potion" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix : refactor game + menu. &#10;bug at interagir with monster + potion" />
+    <MESSAGE value="fix bug." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bug." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

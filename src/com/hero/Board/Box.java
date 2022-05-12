@@ -9,21 +9,12 @@ import com.hero.Hero.Hero;
 
 public class Box {
   Event content;
-  int random = (int) (Math.random() * 3) + 1;
+
 
   Box() {
-    switch (random) {
-      case 1:
-        content = new StuffEvent();
-        break;
-      case 2:
-        content = new LifeEvent();
-        break;
-      case 3:
-        content = new EnemyEvent();
-        break;
-      default:
-    }
+  }
+  Box (Event content){
+    this.content = content;
   }
 
   public void interagir(Hero player) {

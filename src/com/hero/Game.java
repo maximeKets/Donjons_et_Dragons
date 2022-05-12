@@ -28,11 +28,14 @@ public class Game {
     while (board == null){
       board = createBoard(menu.choiceLever());
     }
-    try {
-      player = createHero(menu.choiceClass());
-    } catch (WrongAnswer e) {
-      System.out.println(e);
+    while (player == null){
+      try {
+        player = createHero(menu.choiceClass());
+      } catch (WrongAnswer e) {
+        System.out.println(e);
+      }
     }
+
     player.setName(menu.choiceName());
   }
 
