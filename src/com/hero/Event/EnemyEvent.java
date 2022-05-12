@@ -37,7 +37,11 @@ public class EnemyEvent implements Event {
     int vieHero = hero.getLife();
     int vieMonstre = enemy.getLife();
     String name = enemy.getName();
-    int degatHero = hero.getDamage()+hero.getLeftHand().getDamage();
+    int degatHero = hero.getDamage();
+
+    if(hero.getLeftHand() != null){
+      degatHero = hero.getDamage()+hero.getLeftHand().getDamage();
+    }
 
      if (degatHero >= hero.getMaxDamage()) {
        degatHero = hero.getMaxDamage();

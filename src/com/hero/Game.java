@@ -7,20 +7,17 @@ import com.hero.Hero.Champion.Warrior;
 import com.hero.Hero.Champion.Wizzard;
 import com.hero.Exception.PersonnageHorsPlateauException;
 
-import java.util.Scanner;
 
 
 public class Game {
-  private Thimble t;
+  private Dice t;
   private Hero player;
   private Board board;
-  private Scanner clavier;
   private Menu menu;
 
   public Game() {
-    t = new Thimble();
+    t = new Dice();
     menu = new Menu();
-    clavier = new Scanner(System.in);
   }
 
   /**
@@ -28,6 +25,9 @@ public class Game {
    */
   public void start() {
     board = createBoard(menu.choiceLever());
+    while (board == null){
+      board = createBoard(menu.choiceLever());
+    }
     try {
       player = createHero(menu.choiceClass());
     } catch (WrongAnswer e) {
@@ -43,9 +43,9 @@ public class Game {
    * @return player
    */
   public Hero createHero(String classe) throws WrongAnswer {
-    if (classe.equals("Wizzard")) {
+    if (classe.equalsIgnoreCase("Wizzard")) {
       player = new Wizzard();
-    } else if (classe.equals("Warrior")) {
+    } else if (classe.equalsIgnoreCase("Warrior")) {
       player = new Warrior();
     } else {
       throw new WrongAnswer();
@@ -78,7 +78,7 @@ public class Game {
         box.interagir(player);
       } catch (PersonnageHorsPlateauException e) {
         fini = true;
-        System.out.println(e);
+        System.out.println("Bravo vous avez gagné !");
       }
       menu.continueGame();
     }
@@ -91,14 +91,17 @@ public class Game {
    */
   public Board createBoard(String input) {
     Board newBoard = null;
-    if (input.equals("easy")) {
+    if (input.equalsIgnoreCase("easy")) {
       newBoard = new EasyBoard();
     }
-    if (input.equals("medium")) {
+    else if (input.equalsIgnoreCase("medium")) {
       newBoard = new MediumBoard();
     }
-    if (input.equals("hard")) {
+    else if (input.equalsIgnoreCase("hard")) {
       newBoard = new HardBoard();
+    }
+    else {
+      System.out.println("Veuillez rentrer un champ valide.");
     }
     return newBoard;
   }
@@ -107,7 +110,7 @@ public class Game {
    * fonction pour relancer une partie
    */
   public void playGame() {
-    if (menu.startParty().equals("O")) {
+    menu.startParty();
       start();
       int end = 0;
       while ( end < 1)
@@ -117,8 +120,7 @@ public class Game {
             break;
 
           case 2:
-            System.out.print("Quel nom donnez vous à votre personnage ? ");
-            player.setName(clavier.nextLine());
+           menu.changeName(player);
             break;
 
           case 3:
@@ -130,14 +132,6 @@ public class Game {
       play();
       playGame();
 
-    } else if (menu.startParty().equals("N")) {
-      System.exit(0);
-    }
-  }
-
-  public static void main(String[] args) {
-    Game party = new Game();
-    party.playGame();
   }
 
 }

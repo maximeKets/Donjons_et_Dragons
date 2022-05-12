@@ -1,25 +1,21 @@
 package com.hero;
 
-import com.hero.Board.Thimble;
+import com.hero.Board.Dice;
+import com.hero.Hero.Hero;
 
 import java.util.Scanner;
 
 
 public class Menu {
   private Scanner clavier;
-  private Thimble t;
+
 
 
 
   public Menu() {
-    t = new Thimble();
     clavier = new Scanner(System.in);
   }
 
-   /* -----------------------------------G & S ------------------------------------------ */
-
-
-  /*-----------------------------------function ------------------------------------------ */
   /**
    * Menu d'option
    *
@@ -29,33 +25,42 @@ public class Menu {
     int choix = 0;
     System.out.println("Tapez 'I' pour afficher les informations du joueur, 'C' pour modifier le nom,  'Q' pour quitter et 'S' pour commencer la partie");
     String choice = clavier.nextLine();
-    if (choice.equals("I")) {
+    if (choice.equalsIgnoreCase("I")) {
       choix = 1;
     }
-    if (choice.equals("C")) {
+    else if (choice.equalsIgnoreCase("C")) {
       choix = 2;
     }
-    if (choice.equals("Q")) {
+    else if (choice.equalsIgnoreCase("Q")) {
       System.out.println("Nous espérons vous revoir très vite !!! ");
       System.exit(0);
     }
-    if (choice.equals("S")) {
+    else if (choice.equalsIgnoreCase("S")) {
       choix = 3;
+    }
+    else {
+      System.out.println("Réponse non valide.");
+      actionMenu();
     }
     return choix;
   }
 
 
   public void continueGame() {
-    System.out.println("Voulez vous continuer ? 'oui' ou 'non'");
+    System.out.println("Voulez vous continuer ? 'o' oui ou 'n' non");
 
     if (clavier.nextLine().equalsIgnoreCase("o")) {
       System.out.println("la partie continue !");
     }
-    if (clavier.nextLine().equalsIgnoreCase("n")) {
+    else if (clavier.nextLine().equalsIgnoreCase("n")) {
       System.exit(0);
     }
+    else if (!clavier.nextLine().equalsIgnoreCase("o") ||!clavier.nextLine().equalsIgnoreCase("n")){
+      System.out.println("Réponse non valide.");
+      continueGame();
+    }
   }
+
   public String choiceLever (){
     System.out.print("choisisez le niveau de dificulté : 'easy', 'medium', 'hard'");
     return clavier.nextLine();
@@ -70,8 +75,25 @@ public class Menu {
 return clavier.nextLine();
   }
 
-  public String startParty (){
+  public void startParty (){
     System.out.println("Voulez vous Commencer une partie ? 'O' pour oui, 'N' pour non. ");
-    return clavier.nextLine();
+    String answer = clavier.nextLine();
+    if (answer.equalsIgnoreCase("O")){
+      System.out.println("");
+    }
+    else if (answer.equalsIgnoreCase("N")){
+      System.exit(0);
+    }
+    else {
+      System.out.println("Réponse non valide.");
+      startParty();
+    }
+
   }
+
+  public void changeName (Hero hero ){
+    System.out.print("Quel nom donnez vous à votre personnage ? ");
+    hero.setName(clavier.nextLine());
+  }
+
 }

@@ -2,13 +2,18 @@ package com.hero.Board;
 
 import com.hero.Exception.PersonnageHorsPlateauException;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class EasyBoard implements Board {
   private Box[] tab = new Box[64];
+  // private List<Box> tab = new ArrayList<>()
 
   public EasyBoard() {
     for (int i = 0 ; i<tab.length ; i++) {
       tab[i] = new Box();
     }
+    // Collections.shuffle(tab);
   }
 
   @Override

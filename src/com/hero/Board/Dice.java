@@ -1,9 +1,9 @@
 package com.hero.Board;
 
-public class Thimble {
+public class Dice {
   private int value;
 
-  public Thimble() {
+  public Dice() {
   }
 
   /**
