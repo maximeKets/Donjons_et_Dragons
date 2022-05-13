@@ -6,10 +6,10 @@ import com.hero.Hero.Hero;
 public class Warrior extends Hero {
 
   public Warrior(String name) {
-    super(name, 5, 10, 5, 10);
+    super(1, name, 5, 10, 5, 10);
   }
   public Warrior() {
-    super("", 5, 10, 5, 10);
+    super(1, "", 5, 10, 5, 10);
   }
 
 }

@@ -4,10 +4,10 @@ import com.hero.Hero.Hero;
 
 public class Wizzard extends Hero {
   public Wizzard(String name) {
-    super(name, 3, 6, 8, 15);
+    super(1, name, 3, 6, 8, 15);
   }
   public Wizzard() {
-    super("", 3, 6, 8, 15);
+    super(1, "", 3, 6, 8, 15);
   }
 
 }

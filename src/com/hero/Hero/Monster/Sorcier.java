@@ -4,6 +4,6 @@ import com.hero.Hero.Hero;
 
 public class Sorcier extends Hero {
   public Sorcier(){
-    super("Sorcier", 9, 2);
+    super("Sorcier", 9, 2, 500);
   }
 }
