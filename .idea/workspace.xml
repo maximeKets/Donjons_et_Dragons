@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76998ecd-5253-4b42-b7af-13cb1c951aa9" name="Changes" comment="fix bug.">
-      <change afterPath="$PROJECT_DIR$/src/com/hero/Event/EmptyEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Boss.java" afterDir="false" />
+    <list default="true" id="76998ecd-5253-4b42-b7af-13cb1c951aa9" name="Changes" comment="feature : ArrayList for BoardLevel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/Box.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hero/Board/EasyBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/EasyBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hero/Board/HardBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/HardBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hero/Board/MediumBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/MediumBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hero/Event/EnemyEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Event/EnemyEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Exception/PersonnageHorsPlateauException.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hero/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Boss.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +155,8 @@
       <workItem from="1652167342279" duration="19881000" />
       <workItem from="1652251096001" duration="22456000" />
       <workItem from="1652337604437" duration="9007000" />
-      <workItem from="1652353966095" duration="8340000" />
+      <workItem from="1652353966095" duration="8906000" />
+      <workItem from="1652423965726" duration="7276000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1651674250187</created>
@@ -213,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652346826443</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feature : ArrayList for BoardLevel">
+      <created>1652366120510</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1652366120510</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +246,8 @@
     <MESSAGE value="Jeu fonctionnel ! A refactoriser" />
     <MESSAGE value="fix : refactor game + menu. &#10;bug at interagir with monster + potion" />
     <MESSAGE value="fix bug." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bug." />
+    <MESSAGE value="feature : ArrayList for BoardLevel" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature : ArrayList for BoardLevel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

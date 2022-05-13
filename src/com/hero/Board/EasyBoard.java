@@ -1,7 +1,6 @@
 package com.hero.Board;
 
 import com.hero.Event.*;
-import com.hero.Exception.PersonnageHorsPlateauException;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,7 +15,7 @@ public class EasyBoard implements Board {
     while (tab.size() < 64){
       double rand = Math.random();
 
-      if (rand < 0.3){
+      if (rand < 0.2){
         content = new Box(new EnemyEvent());
       }
       else if (rand < 0.6 ){
@@ -32,17 +31,16 @@ public class EasyBoard implements Board {
     }
 
      Collections.shuffle(tab);
-    tab.set(64, new Box(new EnemyEvent()));
+    tab.set(63, new Box(new EnemyEvent(1)));
   }
 
   @Override
-  public Box getBox(int index)  throws PersonnageHorsPlateauException {
-    if (index < tab.size()) {
-      return tab.get(index);
+  public Box getBox(int index)   {
+    if (index >= tab.size()){
+      index = tab.size()-1;
     }
-    else {
-      throw new PersonnageHorsPlateauException();
-    }
+    return tab.get(index);
+
   }
 
   /**

@@ -4,7 +4,6 @@ import com.hero.Event.EmptyEvent;
 import com.hero.Event.EnemyEvent;
 import com.hero.Event.LifeEvent;
 import com.hero.Event.StuffEvent;
-import com.hero.Exception.PersonnageHorsPlateauException;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -34,16 +33,12 @@ public class HardBoard implements Board {
     }
 
     Collections.shuffle(tab);
+    tab.set(128, new Box(new EnemyEvent(3)));
   }
 
   @Override
-  public Box getBox(int index)  throws PersonnageHorsPlateauException {
-    if (index < tab.size()) {
-      return tab.get(index);
-    }
-    else {
-      throw new PersonnageHorsPlateauException();
-    }
+  public Box getBox(int index)   {
+    return tab.get(index);
   }
 
   /**

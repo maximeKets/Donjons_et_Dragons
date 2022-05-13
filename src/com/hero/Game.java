@@ -5,8 +5,6 @@ import com.hero.Exception.WrongAnswer;
 import com.hero.Hero.Hero;
 import com.hero.Hero.Champion.Warrior;
 import com.hero.Hero.Champion.Wizzard;
-import com.hero.Exception.PersonnageHorsPlateauException;
-
 
 
 public class Game {
@@ -70,21 +68,23 @@ public class Game {
    */
   public void play() {
     int boardplace = 0;
-    boolean fini = false;
-    while (!fini) {
+    while (boardplace < board.size()) {
       t.throwDice();
       System.out.println(player.getName() + " Lance le dé et avance de : " + t.getValue() + " cases !");
       boardplace += t.getValue();
-      try {
         Box box = board.getBox(boardplace);
-        System.out.println(player.getName() + " est à la case " + boardplace + " et tombe sur : " + box);
-        box.interagir(player);
-      } catch (PersonnageHorsPlateauException e) {
-        fini = true;
-        System.out.println("Bravo vous avez gagné !");
-      }
-      menu.continueGame();
+        if (boardplace >= board.size()){
+          boardplace = board.size();
+          System.out.println("Vous Arrivez à la dernière case, vous allez combatre le BOSS ");
+          box.interagir(player);
+        }
+        if (boardplace < board.size()){
+          System.out.println(player.getName() + " est à la case " + boardplace + " et tombe sur : " + box);
+          box.interagir(player);
+          menu.continueGame();
+        }
     }
+    System.out.println("Bravo vous avez gagné !");
   }
   /**
    * permet de choisir la difficulté du plateau

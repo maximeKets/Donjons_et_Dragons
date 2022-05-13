@@ -4,8 +4,11 @@ import com.hero.Hero.Hero;
 
 public class Boss extends Hero {
 
-  public Boss(){
-    super("Boss", 30, 3);
+
+  public Boss (String name, int life, int damage){
+    this.setName(name);
+    this.setLife(life);
+    this.setDamage(damage);
   }
 }
 
