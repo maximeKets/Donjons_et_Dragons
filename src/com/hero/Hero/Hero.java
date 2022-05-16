@@ -4,6 +4,8 @@ import com.hero.Stuff.Stuff;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.SortedMap;
+import java.util.TreeMap;
 
 public abstract class Hero {
   private String name;
@@ -13,10 +15,7 @@ public abstract class Hero {
   private int maxDamage;
   private Stuff leftHand;
   private String rightHand;
-
-
   private int level;
-
   private int xp;
 
   public Hero(int level, String name, int life, int maxLife, int damage, int maxDamage) {
@@ -122,6 +121,18 @@ public abstract class Hero {
   public String toString() {
     return "Votre Héro est un " + getClass().getSimpleName() + ", Nommé = " + this.name + " = point de vie : " + this.life + " | point de domage : " + this.damage;
   }
-
-
+  public int levelHero(int xp, int level){
+    SortedMap<Integer, Integer> tabLevel = new TreeMap<>();
+    int palierXp = 600;
+    for (int i=0; i<=10 ; i++){
+      palierXp += palierXp*0.40;
+      tabLevel.put(palierXp, i);
+    }
+    for (int testLevel : tabLevel.keySet()){
+      if(xp > testLevel){
+        level = tabLevel.get(testLevel);
+      }
+    }
+    return level;
+  }
 }

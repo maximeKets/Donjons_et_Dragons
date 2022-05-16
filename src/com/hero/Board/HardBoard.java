@@ -33,11 +33,14 @@ public class HardBoard implements Board {
     }
 
     Collections.shuffle(tab);
-    tab.set(128, new Box(new EnemyEvent(3)));
+    tab.set(127, new Box(new EnemyEvent(3)));
   }
 
   @Override
   public Box getBox(int index)   {
+    if (index >= tab.size()) {
+      index = tab.size() - 1;
+    }
     return tab.get(index);
   }
 

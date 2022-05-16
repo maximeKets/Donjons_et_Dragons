@@ -4,6 +4,6 @@ import com.hero.Hero.Hero;
 
 public class Gobelin extends Hero {
   public Gobelin(){
-  super("Gobelin", 6, 1, 300);
+  super("Gobelin", 6, 1, 350);
 }
 }

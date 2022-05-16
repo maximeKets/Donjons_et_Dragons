@@ -1,6 +1,7 @@
 package com.hero;
 
 import com.hero.Board.*;
+import com.hero.Event.EnemyEvent;
 import com.hero.Exception.WrongAnswer;
 import com.hero.Hero.Hero;
 import com.hero.Hero.Champion.Warrior;
@@ -135,6 +136,23 @@ public class Game {
       play();
       playGame();
 
+  }
+  public void evolutionPlayer (Hero player){
+    int newXp = player.levelHero(player.getXp(), player.getLevel());
+    int lastLevel = player.getLevel();
+    player.setLevel(newXp);
+    if (player.getLevel() >= lastLevel) {
+      int differenceLevel = player.getLevel() - lastLevel;
+      System.out.println(" Félicitation ! Votre héro vient de gagner" + differenceLevel);
+      System.out.println("Vous gagnez "+ differenceLevel + " point de dégats Max et " + differenceLevel + " point de vie Max");
+      System.out.println("Vous récuperez " + differenceLevel+ " Points de vie");
+      int newMaxLife = player.getMaxLife()+ player.getLevel();
+      int newMaxDamage = player.getMaxDamage() + player.getLevel();
+      int gainhp = player.getLife() +differenceLevel;
+      player.setMaxLife(newMaxLife);
+      player.setMaxDamage(newMaxDamage);
+      player.setLife(gainhp);
+    }
   }
 
 }

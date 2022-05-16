@@ -31,15 +31,16 @@ public class EnemyEvent implements Event {
       enemy = new Sorcier();
     }
   }
-  public EnemyEvent(int levelBoss){
-    if (levelBoss == 1){
-      enemy = new Boss("Boos_1", 30,3);
+
+  public EnemyEvent(int levelBoss) {
+    if (levelBoss == 1) {
+      enemy = new Boss("Boos_1", 30, 3, 1000);
     }
-    if (levelBoss == 2){
-      enemy = new Boss("Boos_2", 40,4);
+    if (levelBoss == 2) {
+      enemy = new Boss("Boos_2", 40, 4, 2500);
     }
-    if (levelBoss == 2){
-      enemy = new Boss("Boos_3", 50,5);
+    if (levelBoss == 3) {
+      enemy = new Boss("Boos_3", 50, 5, 3000);
     }
   }
 
@@ -51,13 +52,13 @@ public class EnemyEvent implements Event {
     String name = enemy.getName();
     int degatHero = hero.getDamage();
 
-    if(hero.getLeftHand() != null){
-      degatHero = hero.getDamage()+hero.getLeftHand().getDamage();
+    if (hero.getLeftHand() != null) {
+      degatHero = hero.getDamage() + hero.getLeftHand().getDamage();
     }
 
-     if (degatHero >= hero.getMaxDamage()) {
-       degatHero = hero.getMaxDamage();
-     }
+    if (degatHero >= hero.getMaxDamage()) {
+      degatHero = hero.getMaxDamage();
+    }
 
     System.out.println("le combat commence !");
     while (vieMonstre > 0 || vieHero < 0) {
@@ -67,14 +68,17 @@ public class EnemyEvent implements Event {
         enemy.setLife(vieMonstre);
         System.out.println("Bravo ! Vous avez tué l'énemie ! ");
         System.out.println("Il vous reste " + vieHero + " points de vie.");
+        System.out.println("Vous gagnez " + enemy.getXp() + " Point d'éxpériences");
+        hero.setXp(hero.getXp() + enemy.getXp());
+        party.evolutionPlayer(hero);
       }
-      if (vieMonstre > 0 ){
+      if (vieMonstre > 0) {
         System.out.println(name + " à encore " + vieMonstre + ", il réplique et vous attaque.");
         hero.setLife(vieHero - degatMonstre);
         vieHero -= degatMonstre;
         System.out.println("vous perdez " + degatMonstre + "point de vie. Il vous reste : " + vieHero + " point de vie..");
       }
-      if (vieHero <= 0){
+      if (vieHero <= 0) {
         System.out.println("vous êtes décédé !");
         party.playGame();
       }

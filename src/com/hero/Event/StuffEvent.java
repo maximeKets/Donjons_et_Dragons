@@ -3,7 +3,6 @@ package com.hero.Event;
 import com.hero.Hero.Champion.Warrior;
 import com.hero.Hero.Champion.Wizzard;
 import com.hero.Hero.Hero;
-import com.hero.Potion.Potion;
 import com.hero.Stuff.*;
 
 public class StuffEvent implements Event {
@@ -27,16 +26,18 @@ public class StuffEvent implements Event {
 
   @Override
   public void interagir(Hero hero) {
+    int previousLootDamage = hero.getLeftHand().getDamage();
     System.out.println("Vous trouvez " + loot.getName() + ", cette arme augmente la force de " +loot.getDamage()+ " points.");
-    if ((hero instanceof Warrior && loot instanceof Blade) || (hero instanceof Warrior  && loot instanceof Hammer))
+    if (loot.getFamilly().equals( hero.getClass().getSimpleName()))
     {
-      hero.setLeftHand(loot);
-      System.out.println("Votre force est désormais de "+ hero.getDamage() + "+" + hero.getLeftHand().getDamage());
-    }
-    else if ((hero instanceof Wizzard && loot instanceof Storm) || (hero instanceof Wizzard  && loot instanceof Fireball))
-    {
-      hero.setLeftHand(loot);
-      System.out.println("Votre force est désormais de "+ hero.getDamage() + "+" + hero.getLeftHand().getDamage());
+      if (previousLootDamage < loot.getDamage())
+      {
+        hero.setLeftHand(loot);
+        System.out.println("Votre force est désormais de "+ hero.getDamage() + "+" + hero.getLeftHand().getDamage());
+      }
+      else {
+        System.out.println("cette arme est moins forte que la précédente, Passe ton chemin");
+      }
     }
     else{
       System.out.println("Votre classe ne permet pas d'équiper cette arme :(");

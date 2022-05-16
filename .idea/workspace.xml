@@ -4,15 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76998ecd-5253-4b42-b7af-13cb1c951aa9" name="Changes" comment="feature : Boss ok !">
+    <list default="true" id="76998ecd-5253-4b42-b7af-13cb1c951aa9" name="Changes" comment="feature : level. have to be fixed cause doesn't work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Hero/Champion/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Hero/Champion/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Hero/Champion/Wizzard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Hero/Champion/Wizzard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/EasyBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/EasyBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/HardBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/HardBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/MediumBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/MediumBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Event/EnemyEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Event/EnemyEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Event/StuffEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Event/StuffEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hero/Hero/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Hero/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Dragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Dragon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Boss.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Gobelin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Gobelin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Sorcier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Sorcier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hero/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Stuff/Blade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Stuff/Blade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Stuff/Fireball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Stuff/Fireball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Stuff/Hammer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Stuff/Hammer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Stuff/Storm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Stuff/Storm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Stuff/Stuff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Stuff/Stuff.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +164,8 @@
       <workItem from="1652251096001" duration="22456000" />
       <workItem from="1652337604437" duration="9007000" />
       <workItem from="1652353966095" duration="8906000" />
-      <workItem from="1652423965726" duration="19731000" />
+      <workItem from="1652423965726" duration="20242000" />
+      <workItem from="1652683303355" duration="10540000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1651674250187</created>
@@ -227,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652432891000</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feature : level. have to be fixed cause doesn't work">
+      <created>1652451995434</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1652451995434</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,7 +271,8 @@
     <MESSAGE value="fix bug." />
     <MESSAGE value="feature : ArrayList for BoardLevel" />
     <MESSAGE value="feature : Boss ok !" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature : Boss ok !" />
+    <MESSAGE value="feature : level. have to be fixed cause doesn't work" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature : level. have to be fixed cause doesn't work" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -270,6 +288,11 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.hero.Game" memberName="player" />
+      </pinned-members>
+    </pin-to-top-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="Wizzard" language="JAVA" />

@@ -33,11 +33,14 @@ public class MediumBoard implements Board {
     }
 
     Collections.shuffle(tab);
-    tab.set(96, new Box(new EnemyEvent(2)));
+    tab.set(95, new Box(new EnemyEvent(2)));
   }
 
   @Override
   public Box getBox(int index)   {
+    if (index >= tab.size()) {
+      index = tab.size() - 1;
+    }
       return tab.get(index);
   }
 
