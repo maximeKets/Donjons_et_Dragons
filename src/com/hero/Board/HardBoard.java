@@ -18,7 +18,7 @@ public class HardBoard implements Board {
       double rand = Math.random();
 
       if (rand < 0.45){
-        content = new Box(new EnemyEvent());
+        content = new Box(new EnemyEvent(3));
       }
       else if (rand < 0.675 ){
         content =new Box(new LifeEvent());
@@ -32,8 +32,10 @@ public class HardBoard implements Board {
       tab.add(content);
     }
 
+
     Collections.shuffle(tab);
-    tab.set(127, new Box(new EnemyEvent(3)));
+
+    tab.set(127, new Box(new EnemyEvent("hard")));
   }
 
   @Override

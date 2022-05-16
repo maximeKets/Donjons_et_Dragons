@@ -2,10 +2,7 @@ package com.hero.Event;
 
 import com.hero.Game;
 import com.hero.Hero.Hero;
-import com.hero.Hero.Monster.Boss;
-import com.hero.Hero.Monster.Dragon;
-import com.hero.Hero.Monster.Gobelin;
-import com.hero.Hero.Monster.Sorcier;
+import com.hero.Hero.Monster.*;
 
 
 public class EnemyEvent implements Event {
@@ -18,31 +15,66 @@ public class EnemyEvent implements Event {
     return "" + enemy;
   }
 
-  public EnemyEvent() {
-    int random = (int) (Math.random() * 3) + 1;
-
-    if (random == 1) {
-      enemy = new Dragon();
+  public EnemyEvent (String level){
+    if (level.equals("easy")){
+      enemy = new Boss("Boss_1", 30, 3, 1000);
     }
-    if (random == 2) {
-      enemy = new Gobelin();
+    if (level.equals("medium")) {
+      enemy = new Boss("Boss_2", 40, 4, 2500);
     }
-    if (random == 3) {
-      enemy = new Sorcier();
+    if (level.equals("hard")) {
+      enemy = new Boss("Boss_3", 50, 5, 3000);
     }
   }
 
-  public EnemyEvent(int levelBoss) {
-    if (levelBoss == 1) {
-      enemy = new Boss("Boos_1", 30, 3, 1000);
+  public EnemyEvent(int level) {
+    if (level == 1) {
+      int random = (int) (Math.random() * 3) + 1;
+      if (random == 1) {
+        enemy = new Dragon();
+      }
+      if (random == 2) {
+        enemy = new Gobelin();
+      }
+      if (random == 3) {
+        enemy = new Sorcier();
+      }
     }
-    if (levelBoss == 2) {
-      enemy = new Boss("Boos_2", 40, 4, 2500);
+    if (level == 2){
+      int random = (int) (Math.random() * 4) + 1;
+      if (random == 1) {
+        enemy = new Dragon(1);
+      }
+      if (random == 2) {
+        enemy = new Gobelin(1);
+      }
+      if (random == 3) {
+        enemy = new Sorcier(1);
+      }
+      if (random == 4){
+        enemy = new orc();
+      }
     }
-    if (levelBoss == 3) {
-      enemy = new Boss("Boos_3", 50, 5, 3000);
+    if(level == 3){
+      int random = (int) (Math.random() * 5) + 1;
+      if (random == 1) {
+        enemy = new Dragon(2);
+      }
+      if (random == 2) {
+        enemy = new Gobelin(2);
+      }
+      if (random == 3) {
+        enemy = new Sorcier(2);
+      }
+      if (random == 4){
+        enemy = new orc(1);
+      }
+      if (random == 5){
+        enemy = new Elfe_Noir();
+      }
     }
   }
+
 
   @Override
   public void interagir(Hero hero) {
