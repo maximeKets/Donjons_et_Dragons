@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76998ecd-5253-4b42-b7af-13cb1c951aa9" name="Changes" comment="end of the day, have to make hard board">
+    <list default="true" id="76998ecd-5253-4b42-b7af-13cb1c951aa9" name="Changes" comment="code review">
+      <change afterPath="$PROJECT_DIR$/src/com/hero/Exception/OverBoardPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hero/Board/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/Box.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hero/Board/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/Dice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/HardBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/HardBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/MediumBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/MediumBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Event/StuffEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Event/StuffEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Event/EnemyEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Event/EnemyEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Event/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Event/Event.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hero/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hero/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Stuff/Stuff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Stuff/Stuff.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +159,7 @@
       <workItem from="1652353966095" duration="8906000" />
       <workItem from="1652423965726" duration="20242000" />
       <workItem from="1652683303355" duration="21200000" />
-      <workItem from="1652769375717" duration="6250000" />
+      <workItem from="1652769375717" duration="12029000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1651674250187</created>
@@ -250,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652712295275</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="code review">
+      <created>1652780609660</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1652780609660</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +289,8 @@
     <MESSAGE value="feature : level. have to be fixed cause doesn't work" />
     <MESSAGE value="feature : level work ! &#10;refactor : StuffEvent" />
     <MESSAGE value="end of the day, have to make hard board" />
-    <option name="LAST_COMMIT_MESSAGE" value="end of the day, have to make hard board" />
+    <MESSAGE value="code review" />
+    <option name="LAST_COMMIT_MESSAGE" value="code review" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

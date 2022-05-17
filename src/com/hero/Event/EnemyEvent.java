@@ -1,5 +1,6 @@
 package com.hero.Event;
 
+import com.hero.Exception.OverBoardPlayer;
 import com.hero.Game;
 import com.hero.Hero.Hero;
 import com.hero.Hero.Monster.*;
@@ -77,7 +78,7 @@ public class EnemyEvent implements Event {
 
 
   @Override
-  public void interagir(Hero hero) {
+  public void interagir(Hero hero)  {
     int degatMonstre = enemy.getDamage();
     int vieHero = hero.getLife();
     int vieMonstre = enemy.getLife();

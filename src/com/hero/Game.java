@@ -1,14 +1,14 @@
 package com.hero;
 
 import com.hero.Board.*;
-import com.hero.Event.EnemyEvent;
+import com.hero.Exception.OverBoardPlayer;
 import com.hero.Exception.WrongAnswer;
 import com.hero.Hero.Hero;
 import com.hero.Hero.Champion.Warrior;
 import com.hero.Hero.Champion.Wizzard;
 
 
-public class Game extends Main {
+public class Game {
   private Dice t;
   private Hero player;
   private Board board;
@@ -23,10 +23,10 @@ public class Game extends Main {
    * Start the party
    */
   public void start() {
-    board = createBoard(menu.choiceLever());
-    while (board == null){
+    do{
       board = createBoard(menu.choiceLever());
     }
+    while (board == null);
     while (player == null){
       try {
         player = createHero(menu.choiceClass());
@@ -34,7 +34,6 @@ public class Game extends Main {
         System.out.println(e);
       }
     }
-
     player.setName(menu.choiceName());
   }
 
@@ -67,22 +66,20 @@ public class Game extends Main {
   /**
    * joue une partie
    */
-  public void play() {
+  public void play()  {
     int boardplace = 0;
     while (boardplace < board.size()) {
       t.throwDice();
       System.out.println(player.getName() + " Lance le dé et avance de : " + t.getValue() + " cases !");
       boardplace += t.getValue();
         Box box = board.getBox(boardplace);
-        if (boardplace >= board.size()){
-          boardplace = board.size();
-          System.out.println("Vous Arrivez à la dernière case, vous allez combatre le BOSS ");
-          box.interagir(player);
+        try {
+          interactionBoard(boardplace, box);
         }
-        if (boardplace < board.size()){
-          System.out.println(player.getName() + " est à la case " + boardplace + " et tombe sur : " + box);
+        catch (OverBoardPlayer e){
+          System.out.println(e.getMessage());
+          boardplace = board.size();
           box.interagir(player);
-          menu.continueGame();
         }
     }
     System.out.println("Bravo vous avez gagné !");
@@ -154,6 +151,15 @@ public class Game extends Main {
       player.setLife(gainhp);
     }
   }
-
+  public void interactionBoard(int boardplace, Box box) throws OverBoardPlayer {
+    if (boardplace < board.size()){
+      System.out.println(player.getName() + " est à la case " + boardplace + " et tombe sur : " + box);
+      box.interagir(player);
+      menu.continueGame();
+    }
+    else {
+      throw new OverBoardPlayer();
+    }
+  }
 }
 

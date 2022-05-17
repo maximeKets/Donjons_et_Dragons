@@ -1,12 +1,11 @@
 package com.hero;
 
-import com.hero.Board.Dice;
 import com.hero.Hero.Hero;
 
 import java.util.Scanner;
 
 
-public class Menu extends Main{
+public class Menu {
   private Scanner clavier;
 
 

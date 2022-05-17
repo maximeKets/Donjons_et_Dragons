@@ -1,6 +1,6 @@
 package com.hero.Stuff;
 
-public class Stuff {
+public abstract class Stuff {
   public String name;
   public int damage;
   public String familly;

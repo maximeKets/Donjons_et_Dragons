@@ -1,6 +1,6 @@
 package com.hero.Board;
 
-public class Dice extends Box {
+public class Dice {
   private int value;
 
   public Dice() {
