@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76998ecd-5253-4b42-b7af-13cb1c951aa9" name="Changes" comment="feature : level work ! &#10;refactor : StuffEvent">
-      <change afterPath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Elfe_Noir.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/hero/Hero/Monster/orc.java" afterDir="false" />
+    <list default="true" id="76998ecd-5253-4b42-b7af-13cb1c951aa9" name="Changes" comment="end of the day, have to make hard board">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/EasyBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/EasyBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/Box.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Board/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/Dice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hero/Board/HardBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/HardBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/hero/Board/MediumBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Board/MediumBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Event/EnemyEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Event/EnemyEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Dragon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Dragon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Gobelin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Gobelin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Sorcier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Hero/Monster/Sorcier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Event/StuffEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Event/StuffEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/hero/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/hero/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +156,8 @@
       <workItem from="1652337604437" duration="9007000" />
       <workItem from="1652353966095" duration="8906000" />
       <workItem from="1652423965726" duration="20242000" />
-      <workItem from="1652683303355" duration="21162000" />
+      <workItem from="1652683303355" duration="21200000" />
+      <workItem from="1652769375717" duration="6250000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1651674250187</created>
@@ -244,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652695431592</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="end of the day, have to make hard board">
+      <created>1652712295274</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1652712295275</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +279,8 @@
     <MESSAGE value="feature : Boss ok !" />
     <MESSAGE value="feature : level. have to be fixed cause doesn't work" />
     <MESSAGE value="feature : level work ! &#10;refactor : StuffEvent" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature : level work ! &#10;refactor : StuffEvent" />
+    <MESSAGE value="end of the day, have to make hard board" />
+    <option name="LAST_COMMIT_MESSAGE" value="end of the day, have to make hard board" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

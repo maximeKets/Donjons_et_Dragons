@@ -17,7 +17,7 @@ public class MediumBoard implements Board {
     mediumTab = new ArrayList<>();
     EasyBoard easyTab = new EasyBoard();
     Box content;
-    while (mediumTab.size() < 96){
+    while (mediumTab.size() <32){
       double rand = Math.random();
 
       if (rand < 0.4){

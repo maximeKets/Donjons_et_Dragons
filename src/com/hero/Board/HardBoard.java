@@ -10,11 +10,13 @@ import java.util.Collections;
 import java.util.List;
 
 public class HardBoard implements Board {
-  private List<Box> tab = new ArrayList<>();
+  private List<Box> hardTab;
 
   public HardBoard() {
+    hardTab = new ArrayList<>();
+    MediumBoard mediumTab = new MediumBoard();
     Box content;
-    while (tab.size() < 128){
+    while (hardTab.size() < 32){
       double rand = Math.random();
 
       if (rand < 0.45){
@@ -29,21 +31,21 @@ public class HardBoard implements Board {
       else {
         content = new Box(new EmptyEvent());
       }
-      tab.add(content);
+      hardTab.add(content);
     }
 
 
-    Collections.shuffle(tab);
-
-    tab.set(127, new Box(new EnemyEvent("hard")));
+    Collections.shuffle(hardTab);
+    hardTab.addAll(96, mediumTab.getMediumTab());
+    hardTab.set(127, new Box(new EnemyEvent("hard")));
   }
 
   @Override
   public Box getBox(int index)   {
-    if (index >= tab.size()) {
-      index = tab.size() - 1;
+    if (index >= hardTab.size()) {
+      index = hardTab.size() - 1;
     }
-    return tab.get(index);
+    return hardTab.get(index);
   }
 
   /**
@@ -51,6 +53,6 @@ public class HardBoard implements Board {
    * @return tab.length
    */
   public int size(){
-    return tab.size() ;
+    return hardTab.size() ;
   }
 }

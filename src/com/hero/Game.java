@@ -8,7 +8,7 @@ import com.hero.Hero.Champion.Warrior;
 import com.hero.Hero.Champion.Wizzard;
 
 
-public class Game {
+public class Game extends Main {
   private Dice t;
   private Hero player;
   private Board board;

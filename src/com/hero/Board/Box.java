@@ -7,7 +7,7 @@ import com.hero.Event.StuffEvent;
 import com.hero.Hero.Hero;
 
 
-public class Box {
+public class Box implements Board {
   Event content;
 
 
@@ -25,5 +25,15 @@ public class Box {
   @Override
   public String toString() {
     return "" + content.getClass().getSimpleName();
+  }
+
+  @Override
+  public Box getBox(int index) {
+    return null;
+  }
+
+  @Override
+  public int size() {
+    return 0;
   }
 }

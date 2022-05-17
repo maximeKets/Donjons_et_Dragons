@@ -26,22 +26,28 @@ public class StuffEvent implements Event {
 
   @Override
   public void interagir(Hero hero) {
-    int previousLootDamage = hero.getLeftHand().getDamage();
-    System.out.println("Vous trouvez " + loot.getName() + ", cette arme augmente la force de " +loot.getDamage()+ " points.");
-    if (loot.getFamilly().equals( hero.getClass().getSimpleName()))
-    {
-      if (previousLootDamage < loot.getDamage())
-      {
-        hero.setLeftHand(loot);
-        System.out.println("Votre force est désormais de "+ hero.getDamage() + "+" + hero.getLeftHand().getDamage());
+    System.out.println("Vous trouvez " + loot.getName() + ", cette arme augmente la force de " + loot.getDamage() + " points.");
+    if (hero.getLeftHand() != null) {
+      int previousLootDamage = hero.getLeftHand().getDamage();
+        if (previousLootDamage < loot.getDamage()) {
+          testClassloot(loot, hero);
+        } else {
+          System.out.println("cette arme est inutilisable, Passe ton chemin");
+        }
       }
-      else {
-        System.out.println("cette arme est moins forte que la précédente, Passe ton chemin");
-      }
+     else {
+      testClassloot(loot, hero);
     }
-    else{
+  }
+
+  public void testClassloot (Stuff loot, Hero hero){
+    if (loot.getFamilly().equals(hero.getClass().getSimpleName())) {
+      hero.setLeftHand(loot);
+      System.out.println("Votre force est désormais de " + hero.getDamage() + "+" + hero.getLeftHand().getDamage());
+    } else {
       System.out.println("Votre classe ne permet pas d'équiper cette arme :(");
     }
   }
 }
+
 

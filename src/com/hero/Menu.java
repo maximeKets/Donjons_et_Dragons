@@ -6,7 +6,7 @@ import com.hero.Hero.Hero;
 import java.util.Scanner;
 
 
-public class Menu {
+public class Menu extends Main{
   private Scanner clavier;
 
 
